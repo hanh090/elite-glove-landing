@@ -1,0 +1,19 @@
+{
+  "badge": "ISO & FDA Certified",
+  "title": "Premium",
+  "titleHighlight": "Nitrile Gloves",
+  "titleSuffix": "for Every Industry",
+  "description": "Trusted by medical professionals, laboratories, and industrial workers in over 50 countries. Superior protection meets exceptional comfort.",
+  "cta": {
+    "primaryText": "View Products",
+    "primaryLink": "#products",
+    "secondaryText": "Download Catalog",
+    "secondaryLink": "#"
+  },
+  "stats": [
+    { "value": "20+", "label": "Years Experience" },
+    { "value": "50+", "label": "Countries" },
+    { "value": "100M+", "label": "Gloves Produced" }
+  ],
+  "image": "src/assets/images/hero-gloves.jpg"
+}

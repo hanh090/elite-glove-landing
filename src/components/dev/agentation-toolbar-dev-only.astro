@@ -1,0 +1,25 @@
+---
+/**
+ * Agentation Dev Toolbar - renders only in development mode.
+ * Provides floating annotation toolbar for generating CSS-selector-based
+ * feedback that AI agents can use to locate and fix UI issues.
+ *
+ * Setup (run once):
+ *   npm install @astrojs/react react react-dom agentation
+ *   Then add react() to astro.config.mjs integrations array.
+ */
+---
+
+{import.meta.env.DEV && (
+  <div id="agentation-root">
+    <script>
+      // Lazy-load Agentation only in dev mode (string concat prevents Vite static analysis)
+      const pkg = 'agentation';
+      import(/* @vite-ignore */ pkg).then(({ init }) => {
+        init({ container: document.getElementById('agentation-root') });
+      }).catch(() => {
+        console.warn('[Agentation] Not installed. Run: npm install agentation');
+      });
+    </script>
+  </div>
+)}

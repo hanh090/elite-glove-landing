@@ -1,0 +1,13 @@
+{
+  "badge": "Laboratory",
+  "title": "Laboratory Grade",
+  "subtitle": "Premium Research Gloves",
+  "image": "src/assets/images/laboratory-gloves.jpg",
+  "features": [
+    { "text": "ISO certified quality" },
+    { "text": "Superior chemical barrier" },
+    { "text": "Ambidextrous design" },
+    { "text": "Excellent tactile sensitivity" }
+  ],
+  "order": 3
+}

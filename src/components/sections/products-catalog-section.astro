@@ -1,0 +1,54 @@
+---
+import client from "../../../tina/__generated__/client";
+import ProductCard from "../shared/product-card-item.astro";
+import medicalImage from '../../assets/images/product-medical-examination-gloves.jpg';
+import industrialImage from '../../assets/images/product-industrial-nitrile-gloves.jpg';
+import foodImage from '../../assets/images/product-food-grade-nitrile-gloves.jpg';
+
+const productsData = await client.queries.productsConnection();
+const products = productsData.data.productsConnection.edges
+  .map((edge) => edge.node)
+  .sort((a, b) => (a.order || 0) - (b.order || 0));
+
+// Map product badges to images
+const productImages = {
+  'Medical Grade': medicalImage,
+  'Industrial': industrialImage,
+  'Laboratory': foodImage,
+};
+---
+
+<section class="px-12 py-[100px] bg-[var(--color-bg-alt)] max-md:px-5 max-md:py-16" id="products">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="max-w-[640px] mx-auto text-center mb-16">
+      <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-primary)] mb-4">
+        Our Products
+      </span>
+      <h2 class="text-[40px] font-bold tracking-[-0.02em] text-slate-900 mb-5 leading-[1.2] max-md:text-[28px]">
+        Premium Nitrile Gloves Collection
+      </h2>
+      <p class="text-[17px] text-[var(--color-text-muted)] leading-[1.7]">
+        Engineered for professionals who demand the best in safety, comfort, and durability
+      </p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-8 max-xl:grid-cols-2 max-md:grid-cols-1">
+      {products.map((product) => (
+        <ProductCard
+          badge={product.badge}
+          title={product.title}
+          subtitle={product.subtitle}
+          features={product.features}
+          image={productImages[product.badge]}
+          badgeColor={
+            product.badge === "Industrial"
+              ? "var(--color-cta)"
+              : product.badge === "Laboratory"
+                ? "#7C3AED"
+                : "var(--color-primary)"
+          }
+        />
+      ))}
+    </div>
+  </div>
+</section>

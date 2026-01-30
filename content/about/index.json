@@ -1,0 +1,25 @@
+{
+  "label": "About Us",
+  "title": "Leading the Industry in Quality & Innovation",
+  "paragraph1": "With over 20 years of experience, Elite Glove Corporation has established itself as a global leader in premium nitrile glove manufacturing. Our commitment to excellence drives everything we do.",
+  "paragraph2": "Our state-of-the-art facilities utilize advanced manufacturing technologies and rigorous quality control processes to ensure every glove meets the highest international standards.",
+  "image": "src/assets/images/manufacturing-facility.jpg",
+  "features": [
+    {
+      "title": "R&D Excellence",
+      "description": "Continuous innovation in material science"
+    },
+    {
+      "title": "Quality Control",
+      "description": "AQL 1.5 medical grade standard"
+    },
+    {
+      "title": "Global Distribution",
+      "description": "Fast shipping to 50+ countries"
+    },
+    {
+      "title": "Certified Quality",
+      "description": "ISO, FDA, CE certified products"
+    }
+  ]
+}

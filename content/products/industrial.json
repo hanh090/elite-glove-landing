@@ -1,0 +1,13 @@
+{
+  "badge": "Industrial",
+  "title": "Industrial Heavy-Duty",
+  "subtitle": "Chemical Resistant Protection",
+  "image": "src/assets/images/industrial-gloves.jpg",
+  "features": [
+    { "text": "Enhanced chemical resistance" },
+    { "text": "Extended cuff protection" },
+    { "text": "High tensile strength" },
+    { "text": "Comfortable long-wear fit" }
+  ],
+  "order": 2
+}

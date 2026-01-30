@@ -1,0 +1,27 @@
+{
+  "label": "Technical Specifications",
+  "title": "Industry-Leading Standards",
+  "description": "Our gloves exceed international quality and safety requirements",
+  "items": [
+    {
+      "value": "9.5 mil",
+      "label": "Thickness",
+      "description": "Industry-leading durability"
+    },
+    {
+      "value": "240mm",
+      "label": "Length",
+      "description": "Extended wrist coverage"
+    },
+    {
+      "value": "AQL 1.5",
+      "label": "Quality Level",
+      "description": "Medical grade standard"
+    },
+    {
+      "value": "500%",
+      "label": "Elongation",
+      "description": "Superior flexibility"
+    }
+  ]
+}
