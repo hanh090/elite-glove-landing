@@ -1,0 +1,22 @@
+{
+  "label": "Contact Us",
+  "title": "Let's Start a Conversation",
+  "description": "Get in touch for inquiries, quotes, or partnership opportunities",
+  "contactCards": [
+    {
+      "title": "Email Us",
+      "value": "info@eliteglove.com",
+      "iconName": "envelope"
+    },
+    {
+      "title": "Call Us",
+      "value": "+1 (555) 123-4567",
+      "iconName": "phone"
+    },
+    {
+      "title": "Visit Us",
+      "value": "123 Industry Park, Manufacturing District",
+      "iconName": "map-pin"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "siteName": "Elite Glove",
+  "navigation": {
+    "links": [
+      { "label": "About", "href": "#about" },
+      { "label": "Products", "href": "#products" },
+      { "label": "Features", "href": "#features" },
+      { "label": "Certifications", "href": "#certificates" },
+      { "label": "Global", "href": "#global" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "ctaText": "Request Quote",
+    "ctaLink": "#contact"
+  },
+  "footer": {
+    "description": "Premium nitrile gloves manufacturer trusted by professionals worldwide. Committed to quality, safety, and innovation since 2003.",
+    "columns": [
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "#about" },
+          { "label": "Products", "href": "#products" },
+          { "label": "Certifications", "href": "#certificates" },
+          { "label": "Careers", "href": "#" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "label": "Product Catalog", "href": "#" },
+          { "label": "Safety Guidelines", "href": "#" },
+          { "label": "Quality Standards", "href": "#" },
+          { "label": "Distributors", "href": "#" }
+        ]
+      },
+      {
+        "title": "Contact",
+        "links": [
+          { "label": "Elite Glove Corporation", "href": "#" },
+          { "label": "123 Industry Park", "href": "#" },
+          { "label": "Manufacturing District", "href": "#" },
+          { "label": "+1 (555) 123-4567", "href": "tel:+15551234567" },
+          { "label": "info@eliteglove.com", "href": "mailto:info@eliteglove.com" }
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "title": "Elite Glove - Premium Nitrile Gloves Manufacturer",
+    "description": "World-leading nitrile gloves manufacturer. ISO certified, FDA approved. Trusted by medical professionals and industries globally."
+  }
+}

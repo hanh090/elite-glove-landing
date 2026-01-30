@@ -1,0 +1,36 @@
+---
+import client from "../../../tina/__generated__/client";
+
+const siteData = await client.queries.siteSettings({
+  relativePath: "global.json",
+});
+
+const settings = siteData.data.siteSettings;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-[100] px-12 h-[72px] flex justify-between items-center bg-white/98 backdrop-blur-[12px] border-b border-[var(--color-border)]">
+  <a href="#" class="flex items-center gap-3 no-underline">
+    <img src="/assets/logo_ELITE.png" alt="Elite Glove" class="h-11 rounded-sm" />
+    <span class="text-xl font-semibold text-slate-900 tracking-[-0.02em]">{settings.siteName}</span>
+  </a>
+
+  <ul class="flex gap-10 list-none max-xl:hidden">
+    {settings.navigation.links.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          class="text-[var(--color-text-muted)] no-underline text-sm font-medium transition-colors duration-200 hover:text-[var(--color-primary)]"
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <a
+    href={settings.navigation.ctaLink}
+    class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer border-none inline-flex items-center gap-2 bg-[var(--color-cta)] text-white hover:bg-[var(--color-cta-hover)] hover:-translate-y-px hover:shadow-lg"
+  >
+    {settings.navigation.ctaText}
+  </a>
+</nav>

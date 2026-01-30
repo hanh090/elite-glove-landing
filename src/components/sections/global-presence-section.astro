@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import client from "../../../tina/__generated__/client";
+import globalImage from '../../assets/images/global-asia-forum-event.jpg';
+
+const globalData = await client.queries.globalPresence({
+  relativePath: "index.json",
+});
+
+const global = globalData.data.globalPresence;
+---
+
+<section class="px-12 py-[100px] bg-[var(--color-bg-alt)] max-md:px-5 max-md:py-16" id="global">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="max-w-[640px] mx-auto text-center mb-16">
+      <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-primary)] mb-4">
+        {global.label}
+      </span>
+      <h2 class="text-[40px] font-bold tracking-[-0.02em] text-slate-900 mb-5 leading-[1.2] max-md:text-[28px]">
+        {global.title}
+      </h2>
+      <p class="text-[17px] text-[var(--color-text-muted)] leading-[1.7]">
+        Serving customers across continents with reliable distribution networks
+      </p>
+    </div>
+
+    <div class="rounded-[var(--radius-xl)] overflow-hidden mb-16 relative">
+      <Image
+        src={globalImage}
+        alt="Elite Glove at Global Asia Forum - international presence and partnerships"
+        width={1440}
+        height={450}
+        class="w-full h-[450px] object-cover"
+        format="webp"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-bg-dark)]/30"></div>
+    </div>
+
+    <div class="grid grid-cols-5 gap-5 mb-16 max-xl:grid-cols-3 max-md:grid-cols-1">
+      {global.regions.map((region) => (
+        <div class="bg-white rounded-[var(--radius-md)] p-6 border border-[var(--color-border)] transition-all duration-200 cursor-pointer hover:border-[var(--color-primary)]">
+          <h4 class="text-[15px] font-semibold mb-2 flex items-center gap-[10px]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[18px] h-[18px] text-[var(--color-primary)]">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            {region.name}
+          </h4>
+          <p class="text-[13px] text-[var(--color-text-light)]">{region.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-4 gap-8 bg-white p-12 rounded-[var(--radius-xl)] max-xl:grid-cols-2 max-md:grid-cols-1">
+      {global.stats.map((stat) => (
+        <div class="text-center">
+          <div class="text-[48px] font-bold text-[var(--color-primary)] tracking-[-0.02em] mb-2">
+            {stat.value}
+          </div>
+          <div class="text-sm text-[var(--color-text-muted)] font-medium">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

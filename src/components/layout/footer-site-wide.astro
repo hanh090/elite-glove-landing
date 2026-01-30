@@ -1,0 +1,60 @@
+---
+import client from "../../../tina/__generated__/client";
+
+const siteData = await client.queries.siteSettings({
+  relativePath: "global.json",
+});
+
+const settings = siteData.data.siteSettings;
+---
+
+<footer class="bg-[var(--color-bg-dark)] text-white px-12 pt-20 pb-10">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-16 mb-16 max-xl:grid-cols-2 max-xl:gap-12 max-md:grid-cols-1 max-md:gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <img src="/assets/logo_ELITE.png" alt="Elite Glove" class="h-10 rounded-sm" />
+        <span class="text-xl font-semibold">{settings.siteName}</span>
+      </div>
+      <p class="text-white/60 text-sm leading-[1.7] max-w-[300px]">
+        {settings.footer.description}
+      </p>
+    </div>
+
+    {settings.footer.columns.map((column) => (
+      <div>
+        <h4 class="text-sm font-semibold mb-6 uppercase tracking-[0.05em]">
+          {column.title}
+        </h4>
+        <ul class="list-none">
+          {column.links.map((link) => (
+            <li class="mb-[14px]">
+              <a
+                href={link.href}
+                class="text-white/60 no-underline text-sm transition-colors duration-200 hover:text-[var(--color-primary-light)]"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <div class="border-t border-white/10 pt-8 flex justify-between items-center max-w-[1440px] mx-auto max-md:flex-col max-md:gap-4 max-md:text-center">
+    <p class="text-white/40 text-[13px]">
+      © 2026 Elite Glove Corporation. All Rights Reserved.
+    </p>
+    <div class="flex gap-8">
+      <a href="#" class="text-white/40 text-[13px] no-underline transition-colors duration-200 hover:text-white/80">
+        Privacy Policy
+      </a>
+      <a href="#" class="text-white/40 text-[13px] no-underline transition-colors duration-200 hover:text-white/80">
+        Terms of Service
+      </a>
+      <a href="#" class="text-white/40 text-[13px] no-underline transition-colors duration-200 hover:text-white/80">
+        Cookie Policy
+      </a>
+    </div>
+  </div>
+</footer>

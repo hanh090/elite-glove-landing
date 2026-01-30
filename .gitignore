@@ -1,2 +1,15 @@
 .DS_Store
 *.log
+
+# Astro
+.astro/
+dist/
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# TinaCMS
+tina/__generated__/

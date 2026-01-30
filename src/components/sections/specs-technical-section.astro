@@ -1,0 +1,41 @@
+---
+import client from "../../../tina/__generated__/client";
+
+const specsData = await client.queries.specs({
+  relativePath: "index.json",
+});
+
+const specs = specsData.data.specs;
+---
+
+<section class="bg-[var(--color-bg-dark)] px-12 py-20 my-[100px] max-md:px-5 max-md:py-12 max-md:my-16">
+  <div class="max-w-[1200px] mx-auto text-center">
+    <div class="max-w-[640px] mx-auto mb-14">
+      <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-primary-light)] mb-4">
+        {specs.label}
+      </span>
+      <h2 class="text-[40px] font-bold tracking-[-0.02em] text-white mb-5 leading-[1.2] max-md:text-[28px]">
+        {specs.title}
+      </h2>
+      <p class="text-[17px] text-white/70 leading-[1.7]">
+        {specs.description}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-4 gap-12 max-xl:grid-cols-2 max-md:grid-cols-1">
+      {specs.items.map((item) => (
+        <div class="text-center">
+          <div class="text-[48px] font-bold text-[var(--color-primary-light)] tracking-[-0.02em] mb-2">
+            {item.value}
+          </div>
+          <div class="text-sm text-white font-medium mb-1">
+            {item.label}
+          </div>
+          <div class="text-[13px] text-white/50">
+            {item.description}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

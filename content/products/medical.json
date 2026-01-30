@@ -1,0 +1,13 @@
+{
+  "badge": "Medical Grade",
+  "title": "Medical Grade Blue",
+  "subtitle": "Powder-Free Examination Gloves",
+  "image": "src/assets/images/medical-gloves.jpg",
+  "features": [
+    { "text": "FDA approved for medical use" },
+    { "text": "Latex-free and powder-free" },
+    { "text": "Superior puncture resistance" },
+    { "text": "Textured fingertips for grip" }
+  ],
+  "order": 1
+}

@@ -1,0 +1,46 @@
+{
+  "label": "Certifications",
+  "title": "Internationally Certified Quality",
+  "items": [
+    {
+      "name": "ISO 9001:2015",
+      "description": "Quality Management",
+      "iconName": "clipboard-check"
+    },
+    {
+      "name": "CE Marking",
+      "description": "European Conformity",
+      "iconName": "badge-check"
+    },
+    {
+      "name": "FDA 510(k)",
+      "description": "US Medical Devices",
+      "iconName": "shield-check"
+    },
+    {
+      "name": "ISO 13485",
+      "description": "Medical Devices QMS",
+      "iconName": "shield-exclamation"
+    },
+    {
+      "name": "ISO 14001",
+      "description": "Environmental Mgmt",
+      "iconName": "globe"
+    },
+    {
+      "name": "ASTM D6319",
+      "description": "Testing Standards",
+      "iconName": "cube"
+    },
+    {
+      "name": "EN 455",
+      "description": "Medical Gloves EU",
+      "iconName": "shopping-bag"
+    },
+    {
+      "name": "GMP",
+      "description": "Good Manufacturing",
+      "iconName": "chart-bar"
+    }
+  ]
+}

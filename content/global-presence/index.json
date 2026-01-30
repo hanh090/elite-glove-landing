@@ -1,0 +1,33 @@
+{
+  "label": "Global Presence",
+  "title": "Trusted Worldwide",
+  "mapImage": "src/assets/images/world-map.jpg",
+  "regions": [
+    {
+      "name": "North America",
+      "description": "USA, Canada, Mexico"
+    },
+    {
+      "name": "Europe",
+      "description": "UK, Germany, France, Italy"
+    },
+    {
+      "name": "Asia Pacific",
+      "description": "China, Japan, Singapore"
+    },
+    {
+      "name": "Middle East",
+      "description": "UAE, Saudi Arabia, Qatar"
+    },
+    {
+      "name": "South America",
+      "description": "Brazil, Argentina, Chile"
+    }
+  ],
+  "stats": [
+    { "value": "50+", "label": "Countries Served" },
+    { "value": "200+", "label": "Distribution Partners" },
+    { "value": "5M+", "label": "Monthly Production" },
+    { "value": "98%", "label": "Client Satisfaction" }
+  ]
+}

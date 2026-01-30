@@ -1,0 +1,27 @@
+{
+  "label": "Key Features",
+  "title": "Why Professionals Trust Our Gloves",
+  "description": "Advanced engineering and premium materials deliver unmatched protection",
+  "items": [
+    {
+      "title": "Superior Protection",
+      "description": "Advanced nitrile formula provides excellent barrier protection against chemicals and pathogens",
+      "iconName": "shield-check"
+    },
+    {
+      "title": "Chemical Resistant",
+      "description": "Resistant to a wide range of chemicals, oils, and solvents for safe handling in any environment",
+      "iconName": "beaker"
+    },
+    {
+      "title": "Precision Grip",
+      "description": "Micro-textured fingertips ensure secure grip for delicate procedures and precision work",
+      "iconName": "sparkles"
+    },
+    {
+      "title": "Allergy Safe",
+      "description": "100% latex-free and powder-free formulation, safe for sensitive skin and allergy sufferers",
+      "iconName": "heart"
+    }
+  ]
+}
