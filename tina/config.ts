@@ -279,6 +279,7 @@ export default defineConfig({
               { type: "string", name: "name", label: "Name" },
               { type: "string", name: "description", label: "Description" },
               { type: "string", name: "iconName", label: "Icon Name" },
+              { type: "string", name: "badgeImage", label: "Badge Image Path" },
             ],
           },
         ],

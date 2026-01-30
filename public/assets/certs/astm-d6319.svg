@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="94" stroke="#1a5276" stroke-width="4"/>
+  <circle cx="100" cy="100" r="82" stroke="#1a5276" stroke-width="2"/>
+  <text x="100" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#1a5276">ASTM</text>
+  <line x1="55" y1="70" x2="145" y2="70" stroke="#1a5276" stroke-width="1.5"/>
+  <text x="100" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="24" fill="#1a5276">D6319</text>
+  <text x="100" y="128" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="10" fill="#1a5276">TESTING STANDARD</text>
+  <text x="100" y="148" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="10" fill="#1a5276" letter-spacing="2">COMPLIANT</text>
+  <path d="M80 160 L100 168 L120 160" stroke="#c0392b" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
