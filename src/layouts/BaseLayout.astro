@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import AgentationDevToolbar from '../components/dev/agentation-dev-toolbar-react';
 
 export interface Props {
   title?: string;
@@ -10,6 +11,8 @@ const {
   title = 'Elite Glove - Premium Nitrile Gloves Manufacturer',
   description = 'World-leading nitrile gloves manufacturer. ISO certified, FDA approved. Trusted by medical professionals and industries globally.'
 } = Astro.props;
+
+const isDev = import.meta.env.DEV;
 ---
 
 <!DOCTYPE html>
@@ -23,5 +26,6 @@ const {
 </head>
 <body>
   <slot />
+  {isDev && <AgentationDevToolbar client:only="react" />}
 </body>
 </html>

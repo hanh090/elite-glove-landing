@@ -4,43 +4,51 @@
   "items": [
     {
       "name": "ISO 9001:2015",
-      "description": "Quality Management",
-      "iconName": "clipboard-check"
+      "description": "Quality Management System",
+      "iconName": "clipboard-check",
+      "badgeImage": "/assets/certs/iso-9001.svg"
     },
     {
       "name": "CE Marking",
       "description": "European Conformity",
-      "iconName": "badge-check"
+      "iconName": "badge-check",
+      "badgeImage": "/assets/certs/ce-marking.svg"
     },
     {
       "name": "FDA 510(k)",
       "description": "US Medical Devices",
-      "iconName": "shield-check"
+      "iconName": "shield-check",
+      "badgeImage": "/assets/certs/fda-510k.svg"
     },
     {
       "name": "ISO 13485",
       "description": "Medical Devices QMS",
-      "iconName": "shield-exclamation"
+      "iconName": "shield-exclamation",
+      "badgeImage": "/assets/certs/iso-13485.svg"
     },
     {
       "name": "ISO 14001",
-      "description": "Environmental Mgmt",
-      "iconName": "globe"
+      "description": "Environmental Management",
+      "iconName": "globe",
+      "badgeImage": "/assets/certs/iso-14001.svg"
     },
     {
       "name": "ASTM D6319",
       "description": "Testing Standards",
-      "iconName": "cube"
+      "iconName": "cube",
+      "badgeImage": "/assets/certs/astm-d6319.svg"
     },
     {
       "name": "EN 455",
       "description": "Medical Gloves EU",
-      "iconName": "shopping-bag"
+      "iconName": "shopping-bag",
+      "badgeImage": "/assets/certs/en-455.svg"
     },
     {
       "name": "GMP",
       "description": "Good Manufacturing",
-      "iconName": "chart-bar"
+      "iconName": "chart-bar",
+      "badgeImage": "/assets/certs/gmp.svg"
     }
   ]
 }
