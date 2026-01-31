@@ -39,7 +39,7 @@ const { badge, title, subtitle, features, image, badgeColor = "var(--color-prima
     <ul class="list-none mb-6">
       {features.map((feature) => (
         <li class="flex items-center gap-3 text-sm text-[var(--color-text-muted)] py-[10px] border-b border-[var(--color-border)] last:border-b-0">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-[18px] h-[18px] text-[var(--color-cta)] flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-[18px] h-[18px] text-[var(--color-primary)] flex-shrink-0">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
           </svg>
           {feature.text}
@@ -47,7 +47,7 @@ const { badge, title, subtitle, features, image, badgeColor = "var(--color-prima
       ))}
     </ul>
 
-    <button class="w-full px-6 py-3 font-sans text-sm font-semibold rounded-sm transition-all duration-200 cursor-pointer border-none inline-flex items-center justify-center gap-2 bg-[var(--color-cta)] text-white hover:bg-[var(--color-cta-hover)] hover:-translate-y-px hover:shadow-lg">
+    <button class="w-full px-6 py-3 font-sans text-sm font-semibold rounded-sm transition-all duration-200 cursor-pointer border-none inline-flex items-center justify-center gap-2 bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] hover:-translate-y-px hover:shadow-lg">
       Get Quote
     </button>
   </div>

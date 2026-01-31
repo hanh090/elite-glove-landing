@@ -10,56 +10,59 @@ const heroData = await client.queries.hero({
 const hero = heroData.data.hero;
 ---
 
-<section class="px-12 pt-[120px] pb-20 min-h-[90vh] grid grid-cols-2 gap-20 items-center max-w-[1440px] mx-auto max-xl:grid-cols-1 max-xl:text-center max-xl:gap-12 max-md:px-5 max-md:pt-[100px] max-md:pb-[60px]">
-  <div class="max-w-[560px] max-xl:max-w-full max-xl:order-1">
-    <div class="inline-flex items-center gap-2 bg-[rgba(8,145,178,0.1)] text-[var(--color-primary)] px-4 py-2 rounded-full text-[13px] font-semibold mb-6">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-      </svg>
-      {hero.badge}
-    </div>
-
-    <h1 class="text-[56px] font-bold leading-[1.1] tracking-[-0.03em] text-slate-900 mb-6 max-xl:text-[44px] max-md:text-[32px]">
-      {hero.title} <span class="text-[var(--color-primary)]">{hero.titleHighlight}</span> {hero.titleSuffix}
-    </h1>
-
-    <p class="text-lg text-[var(--color-text-muted)] leading-[1.7] mb-10">
-      {hero.description}
-    </p>
-
-    <div class="flex gap-4 mb-12 max-xl:justify-center">
-      <a href={hero.cta.primaryLink} class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer border-none inline-flex items-center gap-2 bg-[var(--color-cta)] text-white hover:bg-[var(--color-cta-hover)] hover:-translate-y-px hover:shadow-lg">
-        {hero.cta.primaryText}
-      </a>
-      <a href={hero.cta.secondaryLink} class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer inline-flex items-center gap-2 bg-transparent text-slate-900 border border-[var(--color-border)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]">
-        {hero.cta.secondaryText}
-      </a>
-    </div>
-
-    <div class="flex gap-12 pt-8 border-t border-[var(--color-border)] max-xl:justify-center max-md:flex-col max-md:gap-6">
-      {hero.stats.map((stat) => (
-        <div>
-          <div class="text-[32px] font-bold text-slate-900 tracking-[-0.02em]">
-            {stat.value}
-          </div>
-          <div class="text-[13px] text-[var(--color-text-light)] uppercase tracking-[0.05em] mt-1">
-            {stat.label}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <div class="relative max-xl:order-0">
+<section class="relative min-h-[90vh] flex items-center">
+  <!-- Full-width background image -->
+  <div class="absolute inset-0 z-0">
     <Image
       src={heroImage}
       alt="Elite Glove manufacturing facility - state-of-the-art production line"
-      width={1200}
-      height={560}
-      class="w-full h-[560px] object-cover rounded-[var(--radius-xl)] max-md:h-[360px]"
+      width={1920}
+      height={1080}
+      class="w-full h-full object-cover"
       format="webp"
       loading="eager"
     />
-    <div class="absolute -top-5 -right-5 w-full h-full bg-[var(--color-primary)] opacity-10 rounded-[var(--radius-xl)] -z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/60 to-slate-900/30"></div>
+  </div>
+
+  <div class="relative z-10 px-12 pt-[120px] pb-20 max-w-[1440px] mx-auto w-full max-md:px-5 max-md:pt-[100px] max-md:pb-[60px]">
+    <div class="max-w-[620px]">
+      <div class="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full text-[13px] font-semibold mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+        </svg>
+        {hero.badge}
+      </div>
+
+      <h1 class="text-[56px] font-bold leading-[1.1] tracking-[-0.03em] text-white mb-6 max-xl:text-[44px] max-md:text-[32px]">
+        {hero.title} <span class="text-[var(--color-primary-light)]">{hero.titleHighlight}</span> {hero.titleSuffix}
+      </h1>
+
+      <p class="text-lg text-white/75 leading-[1.7] mb-10">
+        {hero.description}
+      </p>
+
+      <div class="flex gap-4 mb-12">
+        <a href={hero.cta.primaryLink} class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer border-none inline-flex items-center gap-2 bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] hover:-translate-y-px hover:shadow-lg">
+          {hero.cta.primaryText}
+        </a>
+        <a href={hero.cta.secondaryLink} class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer inline-flex items-center gap-2 bg-transparent text-white border border-white/30 hover:border-white hover:bg-white/10">
+          {hero.cta.secondaryText}
+        </a>
+      </div>
+
+      <div class="flex gap-12 pt-8 border-t border-white/20 max-md:flex-col max-md:gap-6">
+        {hero.stats.map((stat) => (
+          <div>
+            <div class="text-[32px] font-bold text-white tracking-[-0.02em]">
+              {stat.value}
+            </div>
+            <div class="text-[13px] text-white/60 uppercase tracking-[0.05em] mt-1">
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 </section>
