@@ -11,7 +11,5 @@ node_modules/
 .env.*
 !.env.example
 
-# TinaCMS
-# tina/__generated__/ is tracked - contains custom file-based client
 .vercel
 .env*.local
