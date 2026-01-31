@@ -1,33 +1,23 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// Read JSON content files directly - works both locally and in production builds
-// No TinaCMS Cloud dependency needed for static site generation
+// Read JSON content files directly from filesystem
 function readContentFile(dirName: string, relativePath: string) {
   const contentDir = path.resolve(process.cwd(), "content");
   const filePath = path.join(contentDir, dirName, relativePath);
-  const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw);
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 }
 
-// Build a query result matching TinaCMS client shape: { data: { [queryName]: content } }
-// queryName must match what components expect (e.g. "siteSettings", not "site-settings")
 function buildQueryResult(queryName: string, dirName: string, relativePath: string) {
-  const content = readContentFile(dirName, relativePath);
-  return { data: { [queryName]: content } };
+  return { data: { [queryName]: readContentFile(dirName, relativePath) } };
 }
 
-// List all JSON files in a collection directory
 function listCollectionFiles(dirName: string) {
-  const contentDir = path.resolve(process.cwd(), "content");
-  const collectionDir = path.join(contentDir, dirName);
-  if (!fs.existsSync(collectionDir)) return [];
-  return fs
-    .readdirSync(collectionDir)
-    .filter((f: string) => f.endsWith(".json"));
+  const dir = path.join(path.resolve(process.cwd(), "content"), dirName);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((f: string) => f.endsWith(".json"));
 }
 
-// Client that mimics TinaCMS client API but reads from local JSON files
 const client = {
   queries: {
     siteSettings: (args: { relativePath: string }) =>
@@ -40,9 +30,7 @@ const client = {
       buildQueryResult("products", "products", args.relativePath),
     productsConnection: () => {
       const files = listCollectionFiles("products");
-      const edges = files.map((f: string) => ({
-        node: readContentFile("products", f),
-      }));
+      const edges = files.map((f: string) => ({ node: readContentFile("products", f) }));
       return { data: { productsConnection: { edges } } };
     },
     features: (args: { relativePath: string }) =>

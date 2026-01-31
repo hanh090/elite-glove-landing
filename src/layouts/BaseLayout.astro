@@ -12,7 +12,7 @@ const {
   description = 'World-leading nitrile gloves manufacturer. ISO certified, FDA approved. Trusted by medical professionals and industries globally.'
 } = Astro.props;
 
-const isDev = import.meta.env.DEV;
+const showToolbar = import.meta.env.DEV || import.meta.env.PREVIEW;
 ---
 
 <!DOCTYPE html>
@@ -26,6 +26,6 @@ const isDev = import.meta.env.DEV;
 </head>
 <body>
   <slot />
-  {isDev && <AgentationDevToolbar client:only="react" />}
+  {showToolbar && <AgentationDevToolbar client:only="react" />}
 </body>
 </html>
