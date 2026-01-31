@@ -42,15 +42,6 @@ const hero = heroData.data.hero;
         {hero.description}
       </p>
 
-      <div class="flex gap-4 mb-12">
-        <a href={hero.cta.primaryLink} class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer border-none inline-flex items-center gap-2 bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] hover:-translate-y-px hover:shadow-lg">
-          {hero.cta.primaryText}
-        </a>
-        <a href={hero.cta.secondaryLink} class="px-6 py-3 font-sans text-sm font-semibold no-underline rounded-sm transition-all duration-200 cursor-pointer inline-flex items-center gap-2 bg-transparent text-white border border-white/30 hover:border-white hover:bg-white/10">
-          {hero.cta.secondaryText}
-        </a>
-      </div>
-
       <div class="flex gap-12 pt-8 border-t border-white/20 max-md:flex-col max-md:gap-6">
         {hero.stats.map((stat) => (
           <div>
