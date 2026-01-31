@@ -1,17 +1,36 @@
 ---
-import { Image } from 'astro:assets';
 import client from "../../../tina/__generated__/client";
-import globalImage from '../../assets/images/global-asia-forum-event.jpg';
 
 const globalData = await client.queries.globalPresence({
   relativePath: "index.json",
 });
 
 const global = globalData.data.globalPresence;
+
+/** Representative flag emoji per region */
+const regionFlags: Record<string, string> = {
+  "North America": "\u{1F1FA}\u{1F1F8}",
+  "Europe": "\u{1F1EA}\u{1F1FA}",
+  "Asia Pacific": "\u{1F1F8}\u{1F1EC}",
+  "Middle East": "\u{1F1E6}\u{1F1EA}",
+  "South America": "\u{1F1E7}\u{1F1F7}",
+};
+
+/**
+ * Pin positions as percentage offsets on the dotted-map SVG.
+ * The dotted-map uses Mercator projection with known bounds.
+ */
+const regionPins: Record<string, { top: string; left: string }> = {
+  "North America": { top: "33%", left: "18%" },
+  "Europe":        { top: "25%", left: "48%" },
+  "Asia Pacific":  { top: "42%", left: "80%" },
+  "Middle East":   { top: "38%", left: "58%" },
+  "South America": { top: "65%", left: "28%" },
+};
 ---
 
-<section class="px-12 py-[100px] bg-[var(--color-bg-alt)] max-md:px-5 max-md:py-16" id="global">
-  <div class="max-w-[1440px] mx-auto">
+<section class="px-12 py-[100px] max-md:px-5 max-md:py-16" id="global">
+  <div class="max-w-[1440px] mx-auto px-12 max-md:px-5">
     <div class="max-w-[640px] mx-auto text-center mb-16">
       <span class="inline-block text-4xl font-extrabold uppercase tracking-[0.04em] text-[var(--color-primary)] mb-4">
         {global.label}
@@ -23,27 +42,42 @@ const global = globalData.data.globalPresence;
         Serving customers across continents with reliable distribution networks
       </p>
     </div>
+  </div>
 
-    <div class="rounded-[var(--radius-xl)] overflow-hidden mb-16 relative">
-      <Image
-        src={globalImage}
-        alt="Elite Glove at Global Asia Forum - international presence and partnerships"
-        width={1440}
-        height={450}
-        class="w-full h-[450px] object-cover"
-        format="webp"
-      />
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--color-bg-dark)]/30"></div>
-    </div>
+  <!-- Full-width dotted world map with overlaid pin labels -->
+  <div class="w-full max-w-[1440px] mx-auto px-12 max-md:px-5 relative overflow-hidden" style="margin-bottom: -30px;">
+    <img
+      src="/assets/world-map-dotted.svg"
+      alt="Dotted world map showing Elite Glove global distribution"
+      class="w-full h-auto mb-[-30px]"
+      loading="lazy"
+    />
+    <!-- Region pin labels positioned over the map -->
+    {global.regions.map((region) => {
+      const pin = regionPins[region.name];
+      if (!pin) return null;
+      return (
+        <div
+          class="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1 pointer-events-none"
+          style={`top: ${pin.top}; left: ${pin.left};`}
+        >
+          <span class="bg-white/95 backdrop-blur-sm text-[11px] font-semibold text-slate-800 px-3 py-1 rounded-full shadow-sm border border-slate-200 whitespace-nowrap max-md:text-[9px] max-md:px-2">
+            {region.name}
+          </span>
+          <span class="w-3 h-3 rounded-full bg-[var(--color-primary)] border-2 border-white shadow-md"></span>
+          <span class="absolute w-6 h-6 rounded-full bg-[var(--color-primary)]/20 animate-ping" style="top: calc(100% - 18px);"></span>
+        </div>
+      );
+    })}
+  </div>
 
+  <div class="bg-white">
+    <div class="max-w-[1440px] mx-auto px-12 max-md:px-5 py-12">
     <div class="grid grid-cols-5 gap-5 mb-16 max-xl:grid-cols-3 max-md:grid-cols-1">
       {global.regions.map((region) => (
-        <div class="bg-white rounded-[var(--radius-md)] p-6 border border-[var(--color-border)] transition-all duration-200 cursor-pointer hover:border-[var(--color-primary)]">
+        <div class="bg-[var(--color-bg-alt)] rounded-[var(--radius-md)] p-6 border border-[var(--color-border)] transition-all duration-200 cursor-pointer hover:border-[var(--color-primary)]">
           <h4 class="text-[15px] font-semibold mb-2 flex items-center gap-[10px]">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[18px] h-[18px] text-[var(--color-primary)]">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-            </svg>
+            <span class="text-xl leading-none">{regionFlags[region.name] || "\u{1F30D}"}</span>
             {region.name}
           </h4>
           <p class="text-[13px] text-[var(--color-text-light)]">{region.description}</p>
@@ -51,7 +85,7 @@ const global = globalData.data.globalPresence;
       ))}
     </div>
 
-    <div class="grid grid-cols-4 gap-8 bg-white p-12 rounded-[var(--radius-xl)] max-xl:grid-cols-2 max-md:grid-cols-1">
+    <div class="grid grid-cols-4 gap-8 bg-[var(--color-bg-alt)] p-12 rounded-[var(--radius-xl)] max-xl:grid-cols-2 max-md:grid-cols-1">
       {global.stats.map((stat) => (
         <div class="text-center">
           <div class="text-[48px] font-bold text-[var(--color-primary)] tracking-[-0.02em] mb-2">
@@ -63,5 +97,6 @@ const global = globalData.data.globalPresence;
         </div>
       ))}
     </div>
+  </div>
   </div>
 </section>

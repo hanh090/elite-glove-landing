@@ -1,27 +1,27 @@
 {
-  "label": "Key Features",
-  "title": "Why Professionals Trust Our Gloves",
-  "description": "Advanced engineering and premium materials deliver unmatched protection",
+  "label": "Applications",
+  "title": "Market Segments We Serve",
+  "description": "Premium nitrile gloves engineered for diverse professional environments",
   "items": [
     {
-      "title": "Superior Protection",
-      "description": "Advanced nitrile formula provides excellent barrier protection against chemicals and pathogens",
-      "iconName": "shield-check"
+      "title": "Healthcare",
+      "description": "Medical-grade nitrile gloves for hospitals, clinics, and laboratories requiring superior barrier protection",
+      "iconName": "heart"
     },
     {
-      "title": "Chemical Resistant",
-      "description": "Resistant to a wide range of chemicals, oils, and solvents for safe handling in any environment",
-      "iconName": "beaker"
-    },
-    {
-      "title": "Precision Grip",
-      "description": "Micro-textured fingertips ensure secure grip for delicate procedures and precision work",
+      "title": "Spa & Beauty Salon",
+      "description": "Comfortable, powder-free gloves for aestheticians, hair stylists, and beauty professionals",
       "iconName": "sparkles"
     },
     {
-      "title": "Allergy Safe",
-      "description": "100% latex-free and powder-free formulation, safe for sensitive skin and allergy sufferers",
-      "iconName": "heart"
+      "title": "Food Processing",
+      "description": "Food-grade certified gloves for safe handling in food preparation, processing, and service",
+      "iconName": "beaker"
+    },
+    {
+      "title": "Dental",
+      "description": "Precision-fit examination gloves with textured fingertips for dental procedures and patient care",
+      "iconName": "shield-check"
     }
   ]
 }
