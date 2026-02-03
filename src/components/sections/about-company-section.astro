@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import client from "../../../tina/__generated__/client";
+import client from "../../lib/content-client";
 import aboutImage from '../../assets/images/about-manufacturing-facility.jpg';
 
 const aboutData = await client.queries.about({
