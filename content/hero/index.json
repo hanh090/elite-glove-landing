@@ -1,19 +1,22 @@
 {
-  "badge": "ISO & FDA Certified",
-  "title": "Premium",
-  "titleHighlight": "Nitrile Gloves",
-  "titleSuffix": "for Every Industry",
-  "description": "Trusted by medical professionals, laboratories, and industrial workers in over 50 countries. Superior protection meets exceptional comfort.",
+  "badge": "Authorized Distributor – Viet Glove Corporation",
+  "title": "Elite Gloves",
+  "titleHighlight": "Trading L.L.C",
+  "titleSuffix": "for UAE & GCC",
+  "description": "Reliable medical glove supply backed by certified manufacturing in Vietnam. Strong logistics and supply system supporting GCC markets.",
+  "chairmanMessage": "At Elite Gloves Trading L.L.C, we believe that long-term success is built on trust, capability, and execution. With decades of experience across logistics, port operations, and regional supply chain development in the UAE, our leadership brings a deep understanding of reliability, compliance, and operational excellence. These principles shape how we build partnerships and support healthcare supply across the GCC.\n\nAs the authorized distributor of Viet Glove Corporation, Elite Gloves Trading L.L.C is committed to delivering stable and certified medical glove supply, supported by strong manufacturing capabilities in Vietnam and a robust logistics and distribution system in Dubai.\n\nOur vision goes beyond short-term transactions. We are focused on long-term market development, sustainable partnerships, and contributing positively to the healthcare ecosystem of the GCC.",
+  "chairmanName": "Mr. Hassan Al Hawi",
+  "chairmanTitle": "Chairman",
   "cta": {
-    "primaryText": "View Products",
-    "primaryLink": "#products",
-    "secondaryText": "Download Catalog",
-    "secondaryLink": "#"
+    "primaryText": "Contact Us",
+    "primaryLink": "#contact",
+    "secondaryText": "Request Company Profile",
+    "secondaryLink": "#contact"
   },
   "stats": [
-    { "value": "20+", "label": "Years Experience" },
-    { "value": "50+", "label": "Countries" },
-    { "value": "100M+", "label": "Gloves Produced" }
+    { "value": "UAE & GCC", "label": "Market Coverage" },
+    { "value": "ISO 13485", "label": "Certified Manufacturing" },
+    { "value": "Dubai", "label": "Regional Hub" }
   ],
   "image": "src/assets/images/hero-gloves.jpg"
 }

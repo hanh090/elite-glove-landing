@@ -38,9 +38,19 @@ const hero = heroData.data.hero;
         {hero.title} <span class="text-[var(--color-primary-light)]">{hero.titleHighlight}</span> {hero.titleSuffix}
       </h1>
 
-      <p class="text-lg text-white/75 leading-[1.7] mb-10">
+      <p class="text-lg text-white/75 leading-[1.7] mb-8">
         {hero.description}
       </p>
+
+      <!-- CTA buttons -->
+      <div class="flex gap-4 mb-10 max-md:flex-col">
+        <a href={hero.cta.primaryLink} class="inline-flex items-center justify-center px-7 py-3.5 bg-[var(--color-primary)] text-white font-semibold rounded-[var(--radius-md)] hover:bg-[var(--color-primary-dark)] transition-colors">
+          {hero.cta.primaryText}
+        </a>
+        <a href={hero.cta.secondaryLink} class="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 text-white font-semibold rounded-[var(--radius-md)] hover:bg-white/10 transition-colors">
+          {hero.cta.secondaryText}
+        </a>
+      </div>
 
       <div class="flex gap-12 pt-8 border-t border-white/20 max-md:flex-col max-md:gap-6">
         {hero.stats.map((stat) => (

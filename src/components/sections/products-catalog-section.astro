@@ -1,34 +1,40 @@
 ---
 import client from "../../../tina/__generated__/client";
 import ProductCard from "../shared/product-card-item.astro";
-import medicalImage from '../../assets/images/product-medical-examination-gloves.jpg';
-import industrialImage from '../../assets/images/product-industrial-nitrile-gloves.jpg';
-import foodImage from '../../assets/images/product-food-grade-nitrile-gloves.jpg';
+import latexImage from '../../assets/images/latex-gloves.jpg';
+import nitrileImage from '../../assets/images/nitrile-gloves.jpg';
+import diamondGripImage from '../../assets/images/diamond-grip-gloves.jpg';
 
 const productsData = await client.queries.productsConnection();
 const products = productsData.data.productsConnection.edges
   .map((edge) => edge.node)
   .sort((a, b) => (a.order || 0) - (b.order || 0));
 
-// Map product badges to images
 const productImages = {
-  'Medical Grade': medicalImage,
-  'Industrial': industrialImage,
-  'Laboratory': foodImage,
+  'Latex': latexImage,
+  'Nitrile': nitrileImage,
+  'Heavy Duty': diamondGripImage,
+};
+
+// Badge colors per product type
+const badgeColors = {
+  'Latex': '#16a34a',
+  'Nitrile': 'var(--color-primary)',
+  'Heavy Duty': '#1e293b',
 };
 ---
 
 <section class="px-12 py-[100px] bg-[var(--color-bg-alt)] max-md:px-5 max-md:py-16" id="products">
   <div class="max-w-[1440px] mx-auto">
     <div class="max-w-[640px] mx-auto text-center mb-16">
-      <span class="inline-block text-4xl font-extrabold uppercase tracking-[0.04em] text-[var(--color-primary)] mb-4">
+      <span class="inline-block text-sm font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] mb-4">
         Our Products
       </span>
-      <h2 class="text-[24px] font-semibold tracking-[-0.01em] text-slate-900 mb-5 leading-[1.3] max-md:text-[20px]">
-        Premium Nitrile Gloves Collection
+      <h2 class="text-[32px] font-semibold tracking-[-0.02em] text-slate-900 mb-5 leading-[1.2] max-md:text-[24px]">
+        Medical & Industrial Gloves Collection
       </h2>
       <p class="text-[17px] text-[var(--color-text-muted)] leading-[1.7]">
-        Engineered for professionals who demand the best in safety, comfort, and durability
+        Manufactured by Viet Glove Corporation with certified quality for diverse professional environments
       </p>
     </div>
 
@@ -38,15 +44,11 @@ const productImages = {
           badge={product.badge}
           title={product.title}
           subtitle={product.subtitle}
-          features={product.features}
+          applications={product.applications}
+          keyFeatures={product.keyFeatures}
+          specifications={product.specifications}
           image={productImages[product.badge]}
-          badgeColor={
-            product.badge === "Industrial"
-              ? "var(--color-primary)"
-              : product.badge === "Laboratory"
-                ? "#7C3AED"
-                : "var(--color-primary)"
-          }
+          badgeColor={badgeColors[product.badge] || 'var(--color-primary)'}
         />
       ))}
     </div>

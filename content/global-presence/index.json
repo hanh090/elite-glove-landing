@@ -1,33 +1,33 @@
 {
   "label": "Markets",
-  "title": "Trusted Worldwide",
+  "title": "Serving UAE & GCC",
   "mapImage": "src/assets/images/world-map.jpg",
   "regions": [
     {
-      "name": "North America",
-      "description": "USA, Canada, Mexico"
+      "name": "United Arab Emirates",
+      "description": "Dubai headquarters & distribution hub"
     },
     {
-      "name": "Europe",
-      "description": "UK, Germany, France, Italy"
+      "name": "Saudi Arabia",
+      "description": "Healthcare and industrial supply"
     },
     {
-      "name": "Asia Pacific",
-      "description": "China, Japan, Singapore"
+      "name": "Qatar",
+      "description": "Medical facilities and clinics"
     },
     {
-      "name": "Middle East",
-      "description": "UAE, Saudi Arabia, Qatar"
+      "name": "Kuwait",
+      "description": "Healthcare sector distribution"
     },
     {
-      "name": "South America",
-      "description": "Brazil, Argentina, Chile"
+      "name": "Oman & Bahrain",
+      "description": "Expanding regional coverage"
     }
   ],
   "stats": [
-    { "value": "50+", "label": "Countries Served" },
-    { "value": "200+", "label": "Distribution Partners" },
-    { "value": "5M+", "label": "Monthly Production" },
-    { "value": "98%", "label": "Client Satisfaction" }
+    { "value": "UAE & GCC", "label": "Market Coverage" },
+    { "value": "Dubai", "label": "Distribution Hub" },
+    { "value": "Vietnam", "label": "Manufacturing Base" },
+    { "value": "ISO 13485", "label": "Certified Quality" }
   ]
 }

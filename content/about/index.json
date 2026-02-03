@@ -1,25 +1,25 @@
 {
   "label": "About Us",
-  "title": "Leading the Industry in Quality & Innovation",
-  "paragraph1": "With over 20 years of experience, Elite Glove Corporation has established itself as a global leader in premium nitrile glove manufacturing. Our commitment to excellence drives everything we do.",
-  "paragraph2": "Our state-of-the-art facilities utilize advanced manufacturing technologies and rigorous quality control processes to ensure every glove meets the highest international standards.",
+  "title": "Dubai-Based Medical Gloves Distribution",
+  "paragraph1": "Elite Gloves Trading L.L.C is a Dubai-based medical gloves distribution company serving the UAE & GCC markets. As the authorized distributor of Viet Glove Corporation, we provide stable and certified medical glove supply supported by strong manufacturing capabilities in Vietnam.",
+  "paragraph2": "Our manufacturing partner, Viet Glove Corporation, operates certified production facilities in Vietnam with a rigorous quality management system meeting international standards. Together, we deliver reliable supply with competitive pricing and consistent quality to the GCC healthcare market.",
   "image": "src/assets/images/manufacturing-facility.jpg",
   "features": [
     {
-      "title": "R&D Excellence",
-      "description": "Continuous innovation in material science"
+      "title": "Local Distribution & Warehousing",
+      "description": "Dubai-based logistics and warehousing operations"
     },
     {
-      "title": "Quality Control",
-      "description": "AQL 1.5 medical grade standard"
+      "title": "Customer Coordination",
+      "description": "Dedicated support and customer service in the region"
     },
     {
-      "title": "Global Distribution",
-      "description": "Fast shipping to 50+ countries"
+      "title": "Market Development",
+      "description": "Channel expansion across UAE & GCC markets"
     },
     {
-      "title": "Certified Quality",
-      "description": "ISO, FDA, CE certified products"
+      "title": "Certified Manufacturing",
+      "description": "Backed by Viet Glove Corporation's certified facilities"
     }
   ]
 }

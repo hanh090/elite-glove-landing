@@ -1,0 +1,43 @@
+---
+import client from "../../../tina/__generated__/client";
+
+const heroData = await client.queries.hero({
+  relativePath: "index.json",
+});
+
+const hero = heroData.data.hero;
+---
+
+{hero.chairmanMessage && (
+  <section class="px-12 py-[100px] max-w-[1440px] mx-auto max-md:px-5 max-md:py-16 bg-gradient-to-b from-slate-50 to-white" id="message">
+    <div class="max-w-[640px] mx-auto text-center mb-12">
+      <span class="inline-block text-sm font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] mb-4">
+        Message
+      </span>
+      <h2 class="text-[32px] font-semibold tracking-[-0.02em] text-slate-900 leading-[1.2] max-md:text-[24px]">
+        Chairman's Message
+      </h2>
+    </div>
+
+    <div class="max-w-[800px] mx-auto">
+      <div class="bg-white rounded-[var(--radius-lg)] p-10 border-l-4 border-l-[var(--color-primary)] border border-[var(--color-border)] relative max-md:p-6 shadow-sm">
+        <!-- Quote icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-[var(--color-primary)] mb-6 opacity-30">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
+        </svg>
+
+        <p class="text-slate-700 text-[16px] leading-[1.9] whitespace-pre-line">{hero.chairmanMessage}</p>
+
+        <div class="mt-8 pt-6 border-t border-[var(--color-border)] flex items-center gap-4">
+          <div class="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-white font-bold text-lg">
+            {hero.chairmanName?.charAt(0)}
+          </div>
+          <div>
+            <div class="font-semibold text-slate-900">{hero.chairmanName}</div>
+            <div class="text-sm text-[var(--color-text-muted)]">{hero.chairmanTitle}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
