@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import client from "../../../tina/__generated__/client";
+import client from "../../lib/content-client";
 import heroImage from '../../assets/images/hero-factory-banner.jpg';
 
 const heroData = await client.queries.hero({
