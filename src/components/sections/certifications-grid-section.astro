@@ -1,6 +1,5 @@
 ---
 import client from "../../../tina/__generated__/client";
-import CertCard from "../shared/cert-card-item.astro";
 
 const certsData = await client.queries.certifications({
   relativePath: "index.json",
@@ -9,26 +8,52 @@ const certsData = await client.queries.certifications({
 const certs = certsData.data.certifications;
 ---
 
-<section class="px-12 py-[100px] max-w-[1440px] mx-auto max-md:px-5 max-md:py-16" id="certificates">
-  <div class="max-w-[640px] mx-auto text-center mb-16">
-    <span class="inline-block text-4xl font-extrabold uppercase tracking-[0.04em] text-[var(--color-primary)] mb-4">
-      {certs.label}
-    </span>
-    <h2 class="text-[24px] font-semibold tracking-[-0.01em] text-slate-900 mb-5 leading-[1.3] max-md:text-[20px]">
-      {certs.title}
-    </h2>
-    <p class="text-[17px] text-[var(--color-text-muted)] leading-[1.7]">
-      Our products meet the highest global standards for safety and quality
-    </p>
-  </div>
+<section class="px-12 py-[100px] bg-[var(--color-bg-alt)] max-md:px-5 max-md:py-16" id="certificates">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="max-w-[640px] mx-auto text-center mb-12">
+      <span class="inline-block text-sm font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] mb-4">
+        {certs.label}
+      </span>
+      <h2 class="text-[32px] font-semibold tracking-[-0.02em] text-slate-900 mb-5 leading-[1.2] max-md:text-[24px]">
+        {certs.title}
+      </h2>
+      {certs.note && (
+        <p class="text-sm text-[var(--color-text-muted)] italic">{certs.note}</p>
+      )}
+    </div>
 
-  <div class="grid grid-cols-4 gap-6 max-xl:grid-cols-2 max-md:grid-cols-1">
-    {certs.items.map((cert) => (
-      <CertCard
-        name={cert.name}
-        description={cert.description}
-        badgeImage={cert.badgeImage}
-      />
-    ))}
+    <!-- Cert logos in 2-row carousel with scroll arrows -->
+    <div class="relative">
+      <div class="overflow-x-auto pb-2" id="certs-slider" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <div class="grid grid-rows-2 grid-flow-col gap-4 auto-cols-[160px] min-w-max px-1">
+          {certs.items.map((item) => (
+            <div class="flex flex-col items-center justify-center gap-2 p-3 h-[150px] w-[160px] bg-white rounded-[var(--radius-md)] border border-[var(--color-border)]">
+              <img
+                src={item.image}
+                alt={item.name}
+                class="h-[90px] w-[90px] object-contain"
+                loading="lazy"
+              />
+              <span class="text-[10px] font-medium text-slate-500 text-center leading-tight">{item.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <button id="certs-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full border border-[var(--color-border)] bg-white shadow-md flex items-center justify-center cursor-pointer hover:shadow-lg transition-shadow z-10" aria-label="Scroll left">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-[var(--color-primary)]"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+      </button>
+      <button id="certs-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full border border-[var(--color-border)] bg-white shadow-md flex items-center justify-center cursor-pointer hover:shadow-lg transition-shadow z-10" aria-label="Scroll right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-[var(--color-primary)]"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+      </button>
+    </div>
+    <script>
+      const slider = document.getElementById('certs-slider');
+      const prev = document.getElementById('certs-prev');
+      const next = document.getElementById('certs-next');
+      if (slider && prev && next) {
+        prev.addEventListener('click', () => slider.scrollBy({ left: -400, behavior: 'smooth' }));
+        next.addEventListener('click', () => slider.scrollBy({ left: 400, behavior: 'smooth' }));
+      }
+    </script>
   </div>
 </section>

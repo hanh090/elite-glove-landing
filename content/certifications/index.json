@@ -1,54 +1,23 @@
 {
-  "label": "Certifications",
+  "label": "Certifications & Compliance",
   "title": "Internationally Certified Quality",
+  "note": "Certifications are issued to the manufacturing facilities of Viet Glove Corporation",
   "items": [
-    {
-      "name": "ISO 9001:2015",
-      "description": "Quality Management System",
-      "iconName": "clipboard-check",
-      "badgeImage": "/assets/certs/iso-9001.svg"
-    },
-    {
-      "name": "CE Marking",
-      "description": "European Conformity",
-      "iconName": "badge-check",
-      "badgeImage": "/assets/certs/ce-marking.svg"
-    },
-    {
-      "name": "FDA 510(k)",
-      "description": "US Medical Devices",
-      "iconName": "shield-check",
-      "badgeImage": "/assets/certs/fda-510k.svg"
-    },
-    {
-      "name": "ISO 13485",
-      "description": "Medical Devices QMS",
-      "iconName": "shield-exclamation",
-      "badgeImage": "/assets/certs/iso-13485.svg"
-    },
-    {
-      "name": "ISO 14001",
-      "description": "Environmental Management",
-      "iconName": "globe",
-      "badgeImage": "/assets/certs/iso-14001.svg"
-    },
-    {
-      "name": "ASTM D6319",
-      "description": "Testing Standards",
-      "iconName": "cube",
-      "badgeImage": "/assets/certs/astm-d6319.svg"
-    },
-    {
-      "name": "EN 455",
-      "description": "Medical Gloves EU",
-      "iconName": "shopping-bag",
-      "badgeImage": "/assets/certs/en-455.svg"
-    },
-    {
-      "name": "GMP",
-      "description": "Good Manufacturing",
-      "iconName": "chart-bar",
-      "badgeImage": "/assets/certs/gmp.svg"
-    }
+    { "name": "ISO 13485", "image": "/assets/certs/ISO 13485.png" },
+    { "name": "ISO 9001", "image": "/assets/certs/ISO 9001.png" },
+    { "name": "FDA", "image": "/assets/certs/FDA.png" },
+    { "name": "CE 2777", "image": "/assets/certs/CE 2777.png" },
+    { "name": "Class I", "image": "/assets/certs/Class I.png" },
+    { "name": "TGA", "image": "/assets/certs/TGA.png" },
+    { "name": "KFDA", "image": "/assets/certs/KFDA.png" },
+    { "name": "Anvisa", "image": "/assets/certs/Anvisa.png" },
+    { "name": "HACCP GMP", "image": "/assets/certs/HACCP GMP.png" },
+    { "name": "SA 8000", "image": "/assets/certs/SA 8000.png" },
+    { "name": "Amfori BSCI", "image": "/assets/certs/Amfori BSCI.png" },
+    { "name": "21 CFR 177", "image": "/assets/certs/21 CFR 177.png" },
+    { "name": "EU 10 2011", "image": "/assets/certs/EU 10 2011.png" },
+    { "name": "Food Japan", "image": "/assets/certs/Food Japan.png" },
+    { "name": "CFS", "image": "/assets/certs/CFS.png" },
+    { "name": "BR", "image": "/assets/certs/BR.png" }
   ]
 }

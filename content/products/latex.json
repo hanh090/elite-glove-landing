@@ -1,0 +1,24 @@
+{
+  "badge": "Latex",
+  "title": "Latex Gloves",
+  "subtitle": "Natural Rubber Latex",
+  "image": "src/assets/images/latex-gloves.jpg",
+  "applications": ["Healthcare", "Dental", "Life Sciences", "Veterinary"],
+  "keyFeatures": [
+    { "name": "Latex Allergy Risk", "rating": 6 },
+    { "name": "Toughness and Durability", "rating": 3 },
+    { "name": "Puncture and Tear Resistance", "rating": 4 },
+    { "name": "Comfort and Dexterity", "rating": 6 },
+    { "name": "Food Contact Safety", "rating": 5 },
+    { "name": "Chemical Resistance", "rating": 2 }
+  ],
+  "specifications": [
+    { "label": "Material", "value": "Natural Rubber Latex" },
+    { "label": "Type", "value": "Powdered / Powder Free" },
+    { "label": "Color", "value": "Natural" },
+    { "label": "Design", "value": "Finger Texture, Ambidextrous, Beaded cuff" },
+    { "label": "Size", "value": "XS, S, M, L, XL, XXL" },
+    { "label": "Avg Weight M (± 0.2g)", "value": "Powdered: 4.8g, 5.0g | Powder Free: 5.4g, 5.8g, 6.0g, 6.2g, 6.5g" }
+  ],
+  "order": 1
+}

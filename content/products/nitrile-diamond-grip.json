@@ -1,0 +1,24 @@
+{
+  "badge": "Heavy Duty",
+  "title": "Nitrile Diamond Grip Gloves",
+  "subtitle": "Industrial Grade Protection",
+  "image": "src/assets/images/diamond-grip-gloves.jpg",
+  "applications": ["Heavy Industry", "Manufacturing", "Mechanical Work"],
+  "keyFeatures": [
+    { "name": "Latex Allergy Risk", "rating": 1 },
+    { "name": "Toughness and Durability", "rating": 6 },
+    { "name": "Puncture and Tear Resistance", "rating": 6 },
+    { "name": "Comfort and Dexterity", "rating": 4 },
+    { "name": "Food Contact Safety", "rating": 5 },
+    { "name": "Chemical Resistance", "rating": 6 }
+  ],
+  "specifications": [
+    { "label": "Material", "value": "Synthetic Nitrile Latex" },
+    { "label": "Type", "value": "Powder Free" },
+    { "label": "Color", "value": "Black, Orange" },
+    { "label": "Design", "value": "Diamond-shape, Ambidextrous, Beaded cuff" },
+    { "label": "Size", "value": "S, M, L, XL" },
+    { "label": "Avg Weight M (± 0.2g)", "value": "6.5g, 7.0g, 8.0g, 9.0g" }
+  ],
+  "order": 3
+}

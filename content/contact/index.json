@@ -5,18 +5,19 @@
   "contactCards": [
     {
       "title": "Email Us",
-      "value": "info@eliteglove.com",
+      "value": "info@eliteglovestrad.com",
       "iconName": "envelope"
     },
     {
       "title": "Call Us",
-      "value": "+1 (555) 123-4567",
+      "value": "+971 XX XXX XXXX",
       "iconName": "phone"
     },
     {
       "title": "Visit Us",
-      "value": "123 Industry Park, Manufacturing District",
+      "value": "Dubai, United Arab Emirates",
       "iconName": "map-pin"
     }
-  ]
+  ],
+  "disclaimer": "Elite Gloves Trading L.L.C is an authorized distributor of Viet Glove Corporation. Manufacturing activities are conducted by Viet Glove Corporation in Vietnam."
 }

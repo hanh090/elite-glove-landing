@@ -1,0 +1,24 @@
+{
+  "badge": "Nitrile",
+  "title": "Nitrile Gloves",
+  "subtitle": "Synthetic Nitrile Latex",
+  "image": "src/assets/images/nitrile-gloves.jpg",
+  "applications": ["Food Processing", "F&B, Industrial", "Medical, Dental"],
+  "keyFeatures": [
+    { "name": "Latex Allergy Risk", "rating": 1 },
+    { "name": "Toughness and Durability", "rating": 5 },
+    { "name": "Puncture and Tear Resistance", "rating": 6 },
+    { "name": "Comfort and Dexterity", "rating": 5 },
+    { "name": "Food Contact Safety", "rating": 5 },
+    { "name": "Chemical Resistance", "rating": 6 }
+  ],
+  "specifications": [
+    { "label": "Material", "value": "Synthetic Nitrile Latex" },
+    { "label": "Type", "value": "Powder Free" },
+    { "label": "Color", "value": "Blue, Purple, Pink, Green, Yellow, Orange, White, Black" },
+    { "label": "Design", "value": "Finger Texture, Ambidextrous, Beaded cuff" },
+    { "label": "Size", "value": "XS, S, M, L, XL, XXL" },
+    { "label": "Avg Weight M (± 0.2g)", "value": "2.7g, 3.0g, 3.5g, 4.0g, 4.5g, 5.0g, 5.5g, 6.0g" }
+  ],
+  "order": 2
+}
