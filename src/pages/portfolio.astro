@@ -6,6 +6,63 @@ const description = "AI-first builder. Shipped voice agents, CRM platforms, and 
 
 const projects = [
   {
+    name: "Peeba",
+    tagline: "B2B2C E-Commerce Platform — Team of 5, Run Entirely with AI",
+    description: "Production B2B2C marketplace connecting brands with retailers and consumers across Asia-Pacific. I lead a team of 5 — managing product, engineering, marketing, and operations — with AI as our core multiplier. What would normally require a 20+ person team, we ship with 5 people and AI tools.",
+    tech: ["Node.js", "TypeScript", "PostgreSQL", "React", "Redux", "Elasticsearch", "Stripe", "Xendit", "SendGrid", "GPT-4o", "BullMQ", "Google Cloud"],
+    features: [
+      {
+        title: "Email & Newsletter Automation",
+        detail: "Automated bi-weekly newsletter pipeline with SendGrid. Brand-retailer matching, campaign generation, multi-language templates (EN, CN, JP, ID), Slack-based approval workflow. 30+ campaigns generated and shipped."
+      },
+      {
+        title: "Marketing & Campaigns",
+        detail: "Full campaign management system: audience segmentation, multi-language email templates, featured brands/products, custom styling, delivery tracking. Google Ads campaigns and alternative landing pages for acquisition."
+      },
+      {
+        title: "SEO & Organic Growth",
+        detail: "Technical SEO audit and implementation: structured data schemas (Organization, FAQ, Breadcrumb, Collection), dynamic sitemap generation, keyword research for APAC wholesale marketplace, meta optimization across marketplace pages."
+      },
+      {
+        title: "Brand Onboarding & Lifecycle",
+        detail: "End-to-end brand lifecycle: welcome emails with Stripe invoice PDFs, status tracking (new → onboarding → active), event timeline, automated validation and product import. Onboarding new brands weekly."
+      },
+      {
+        title: "Peeba Direct — B2B2C Channel",
+        detail: "Brands sell directly to consumers via embeddable website widgets. Customer acquisition through email/SMS invitations, regional coupon systems (IDR/USD/HKD), conversion tracking, and reward programs."
+      },
+      {
+        title: "AI Product Enrichment",
+        detail: "GPT-4o via OpenRouter for product data normalization, image extraction, variation parsing (size/color/material), address organization, and freight estimation from China."
+      },
+      {
+        title: "Peeba Mall — Marketplace",
+        detail: "Universal product catalog aggregating brands across regions. Product search (Elasticsearch), category management, inventory aggregation, blocked product configuration per region, multi-locale display."
+      },
+      {
+        title: "Peeba Plus — Subscription Service",
+        detail: "Free shipping subscription for Indonesian retailers. Time-bounded subscriptions, automated coupon application, brand-retailer pairing, admin management with search and creation."
+      },
+      {
+        title: "Peeba Pay — B2B Payments",
+        detail: "Invoice-based payment request system. Invoice upload (Alibaba OSS), Stripe integration, multi-currency support, payment flow stepper, status tracking with Slack notifications."
+      },
+      {
+        title: "Referral & Growth Engine",
+        detail: "Referral system with quota management, brand-specific referrals, external referral tracking, Salesforce integration. Retailer suggestions and network-driven growth."
+      },
+      {
+        title: "Multi-Region Operations",
+        detail: "5+ APAC regions (Indonesia, Hong Kong, USA, Australia, etc.) with locale-specific currencies, 7 languages, shipping integrations (AfterShip, NinjaVan, GoBuyShip), and multi-payment providers."
+      },
+      {
+        title: "AI Email Classification",
+        detail: "OpenAI-powered email classification and routing. Email gateway with threading, sync, subscription management. Automated lead email tracking and response prioritization."
+      }
+    ],
+    color: "#ec4899"
+  },
+  {
     name: "Gabo AI Platform",
     tagline: "AI-Powered CRM & Multi-Channel Communication",
     description: "Full-stack AI platform for B2B sales automation — combining voice agents, WhatsApp messaging, and intelligent lead management into one unified system.",
@@ -79,35 +136,14 @@ const projects = [
       }
     ],
     color: "#f59e0b"
-  },
-  {
-    name: "Peeba E-Commerce Platform",
-    tagline: "B2B2C Marketplace for Asia-Pacific",
-    description: "Production e-commerce platform serving 5+ regions with multi-currency, multi-language support. Powering brands, retailers, and consumers across Asia-Pacific.",
-    tech: ["Node.js", "TypeScript", "PostgreSQL", "React", "Redux", "Elasticsearch", "Stripe", "GPT-4o", "BullMQ"],
-    features: [
-      {
-        title: "Peeba Direct — B2B2C Model",
-        detail: "Enables brands to sell directly to consumers via embeddable widgets. Regional coupon systems, customer tracking, and website verification workflows."
-      },
-      {
-        title: "AI Product Enrichment",
-        detail: "GPT-4o via OpenRouter for product data normalization, image extraction from descriptions, and variation parsing (size, color, material)."
-      },
-      {
-        title: "Multi-Region Operations",
-        detail: "5+ Asia-Pacific regions with locale-specific currencies, languages, shipping integrations (AfterShip, NinjaVan), and payment providers (Stripe, Xendit)."
-      }
-    ],
-    color: "#ec4899"
   }
 ];
 
 const stats = [
-  { value: "4", label: "Shipped Products" },
+  { value: "5", label: "Shipped Products" },
+  { value: "5-Person Team", label: "Run with AI Only" },
   { value: "10+", label: "AI/LLM Integrations" },
-  { value: "<1s", label: "Voice Agent Latency" },
-  { value: "5+", label: "Regions Served" },
+  { value: "5+ Regions", label: "APAC Markets" },
 ];
 
 const aiStack = [
@@ -255,23 +291,23 @@ const aiStack = [
       <div class="grid md:grid-cols-3 gap-8">
         <div class="space-y-3">
           <div class="text-3xl font-bold text-indigo-400">01</div>
-          <h3 class="text-xl font-semibold">AI-First Development</h3>
+          <h3 class="text-xl font-semibold">AI-First Team Leadership</h3>
           <p class="text-slate-400 leading-relaxed">
-            I use Claude Code as my primary development environment. Ideas go from concept to working product in hours, not weeks.
+            I run a team of 5 at Peeba — managing product, engineering, email marketing, SEO, and brand onboarding — all powered by AI. What normally takes 20+ people, we ship with 5.
           </p>
         </div>
         <div class="space-y-3">
           <div class="text-3xl font-bold text-purple-400">02</div>
-          <h3 class="text-xl font-semibold">Product Thinking</h3>
+          <h3 class="text-xl font-semibold">Full-Stack Product Builder</h3>
           <p class="text-slate-400 leading-relaxed">
-            I don't just write code — I ship products. Every technical decision is driven by what users need and what the business requires.
+            From email campaigns and SEO to voice AI agents and B2B2C marketplaces — I ship across the entire stack. Claude Code is my primary development environment.
           </p>
         </div>
         <div class="space-y-3">
           <div class="text-3xl font-bold text-pink-400">03</div>
-          <h3 class="text-xl font-semibold">Ship Fast, Iterate</h3>
+          <h3 class="text-xl font-semibold">Concept to Production in Hours</h3>
           <p class="text-slate-400 leading-relaxed">
-            Built a full AI CRM platform, voice agents, and e-commerce systems — all while continuously shipping to production.
+            Built an AI CRM, voice agents, newsletter automation, and lead enrichment tools — each going from idea to production in hours, not weeks. Ship fast, iterate constantly.
           </p>
         </div>
       </div>
