@@ -1,0 +1,302 @@
+---
+import '../styles/global.css';
+
+const title = "Hanh Le - AI Engineer Portfolio";
+const description = "AI-first builder. Shipped voice agents, CRM platforms, and e-commerce systems with LLMs, RAG, and real-time voice AI.";
+
+const projects = [
+  {
+    name: "Gabo AI Platform",
+    tagline: "AI-Powered CRM & Multi-Channel Communication",
+    description: "Full-stack AI platform for B2B sales automation — combining voice agents, WhatsApp messaging, and intelligent lead management into one unified system.",
+    tech: ["GPT-4o", "LangChain", "Deepgram", "ElevenLabs", "Vapi AI", "Pinecone", "Next.js 14", "Node.js", "PostgreSQL", "WebSocket"],
+    features: [
+      {
+        title: "AI Voice Agents",
+        detail: "Full-duplex voice conversations with sub-second latency (~400-900ms). 5 configurable personas, barge-in support, bilingual (EN/ID). Built with Deepgram Nova-3 STT + ElevenLabs Flash v2.5 TTS."
+      },
+      {
+        title: "AI Studio — No-Code Agent Builder",
+        detail: "Visual interface to configure AI agents: playbooks, personas, system prompts, knowledge bases, and exit conditions. Non-technical users can build and deploy conversational agents."
+      },
+      {
+        title: "RAG Knowledge Base",
+        detail: "Semantic search powered by Pinecone vector DB. Ingests websites (Firecrawl), PDFs, and CSVs. Agents reference knowledge in real-time during conversations."
+      },
+      {
+        title: "AI Appointment Booking",
+        detail: "4 workflow variants: Voice-first, WhatsApp-to-Voice, WhatsApp-only, Voice-to-WhatsApp. Calendar integration, real-time availability, multi-language support."
+      },
+      {
+        title: "LangChain Agent System",
+        detail: "Inbound message classification, lead qualification, intent detection, and meeting booking via tool-based architecture (create_lead, check_availability, book_meeting, escalate)."
+      },
+      {
+        title: "Campaign Automation",
+        detail: "Visual workflow builder (ReactFlow) for multi-channel campaigns across WhatsApp, Voice, and Email. BullMQ job queuing with concurrency management."
+      }
+    ],
+    color: "#6366f1"
+  },
+  {
+    name: "Lead Enrichment Crawler",
+    tagline: "AI-Powered B2B Data Enrichment",
+    description: "Automated pipeline that enriches lead data using a two-pass LLM strategy — web search with tools, then strict JSON consolidation for clean, structured output.",
+    tech: ["OpenAI", "Google GenAI", "TypeScript", "CSV Processing"],
+    features: [
+      {
+        title: "Two-Pass LLM Strategy",
+        detail: "Pass A: Web search with tool use + text output. Pass B: Strict JSON consolidation with Zod validation. Produces high-quality structured data from unstructured sources."
+      },
+      {
+        title: "ICP Classification",
+        detail: "Filters leads against Ideal Customer Profile using OpenAI Responses API. Structured JSON output with batch processing for efficiency."
+      },
+      {
+        title: "Multi-Source Ingestion",
+        detail: "Supports Orderchamp, Faire, LinkedIn Jobs (Unipile API), and custom CSV sources. Schema auto-discovery with automatic web search."
+      }
+    ],
+    color: "#10b981"
+  },
+  {
+    name: "Voice Agent Demos",
+    tagline: "Medical & Clinic Voice AI Applications",
+    description: "Production-ready voice AI demos for healthcare — from clinic appointment booking to clinical notes transcription and prescription management.",
+    tech: ["Deepgram Voice Agent API", "GPT-4o", "Next.js", "React", "WebSocket", "IndexedDB"],
+    features: [
+      {
+        title: "Clinic Appointment Booking",
+        detail: "Bilingual voice agent (EN/ID) that calls leads, answers clinic FAQs from knowledge base, and books appointments via function calling. CSV bulk lead upload."
+      },
+      {
+        title: "Clinical Notes Transcription",
+        detail: "Voice-to-structured-data for medical documentation. Captures patient demographics, visit info, clinical details via sequential function calls."
+      },
+      {
+        title: "Drug Dispatch with Safety Validation",
+        detail: "AI validates medication dosages against safety limits (e.g., Ibuprofen max 3200mg/day). Questions unsafe doses and recommends second opinion."
+      }
+    ],
+    color: "#f59e0b"
+  },
+  {
+    name: "Peeba E-Commerce Platform",
+    tagline: "B2B2C Marketplace for Asia-Pacific",
+    description: "Production e-commerce platform serving 5+ regions with multi-currency, multi-language support. Powering brands, retailers, and consumers across Asia-Pacific.",
+    tech: ["Node.js", "TypeScript", "PostgreSQL", "React", "Redux", "Elasticsearch", "Stripe", "GPT-4o", "BullMQ"],
+    features: [
+      {
+        title: "Peeba Direct — B2B2C Model",
+        detail: "Enables brands to sell directly to consumers via embeddable widgets. Regional coupon systems, customer tracking, and website verification workflows."
+      },
+      {
+        title: "AI Product Enrichment",
+        detail: "GPT-4o via OpenRouter for product data normalization, image extraction from descriptions, and variation parsing (size, color, material)."
+      },
+      {
+        title: "Multi-Region Operations",
+        detail: "5+ Asia-Pacific regions with locale-specific currencies, languages, shipping integrations (AfterShip, NinjaVan), and payment providers (Stripe, Xendit)."
+      }
+    ],
+    color: "#ec4899"
+  }
+];
+
+const stats = [
+  { value: "4", label: "Shipped Products" },
+  { value: "10+", label: "AI/LLM Integrations" },
+  { value: "<1s", label: "Voice Agent Latency" },
+  { value: "5+", label: "Regions Served" },
+];
+
+const aiStack = [
+  { name: "OpenAI GPT-4o", category: "LLM" },
+  { name: "LangChain", category: "Orchestration" },
+  { name: "Deepgram Nova-3", category: "Speech-to-Text" },
+  { name: "ElevenLabs Flash v2.5", category: "Text-to-Speech" },
+  { name: "Vapi AI", category: "Voice Platform" },
+  { name: "Pinecone", category: "Vector DB" },
+  { name: "Mem0", category: "AI Memory" },
+  { name: "Firecrawl", category: "Web Scraping" },
+  { name: "Google GenAI", category: "LLM" },
+  { name: "Groq", category: "Fast Inference" },
+  { name: "Claude Code", category: "AI Dev Tool" },
+  { name: "RAG", category: "Architecture" },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body class="bg-slate-950 text-slate-100">
+
+  <!-- Hero -->
+  <section class="min-h-[80vh] flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-6 py-24">
+      <p class="text-indigo-400 font-medium text-sm tracking-widest uppercase mb-4">AI Engineer</p>
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+        I build products<br>
+        <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">with AI.</span>
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
+        From concept to shipped product in hours. Voice agents, CRM platforms, e-commerce systems —
+        all built AI-first with LLMs, RAG, and real-time voice AI.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-16">
+        <a href="#projects" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-medium transition-colors">
+          View Projects
+        </a>
+        <a href="mailto:hr@thinkprompt.com" class="px-6 py-3 border border-slate-700 hover:border-slate-500 rounded-lg font-medium transition-colors">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {stats.map(stat => (
+          <div class="text-center md:text-left">
+            <div class="text-3xl font-bold text-white">{stat.value}</div>
+            <div class="text-sm text-slate-500">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Mindset -->
+  <section class="py-16 bg-slate-900/50 border-y border-slate-800">
+    <div class="max-w-5xl mx-auto px-6">
+      <blockquote class="text-center">
+        <p class="text-2xl md:text-3xl font-light text-slate-300 italic leading-relaxed">
+          "I don't say: I can't do this because I don't know how.<br>
+          <span class="text-white font-normal not-italic">I say: Give me an hour with AI."</span>
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- AI Stack -->
+  <section class="py-20 bg-slate-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm tracking-widest uppercase text-slate-500 mb-8">AI Stack I Ship With</h2>
+      <div class="flex flex-wrap gap-3">
+        {aiStack.map(tool => (
+          <span class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm">
+            <span class="text-slate-300">{tool.name}</span>
+            <span class="text-slate-600 ml-1.5">/ {tool.category}</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-slate-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm tracking-widest uppercase text-slate-500 mb-12">What I've Shipped</h2>
+
+      <div class="space-y-20">
+        {projects.map((project, i) => (
+          <article class="relative">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-3 h-3 rounded-full" style={`background: ${project.color}`}></div>
+              <span class="text-sm text-slate-500 uppercase tracking-wider">{project.tagline}</span>
+            </div>
+            <h3 class="text-3xl md:text-4xl font-bold mb-4">{project.name}</h3>
+            <p class="text-lg text-slate-400 mb-6 max-w-3xl">{project.description}</p>
+
+            <!-- Tech tags -->
+            <div class="flex flex-wrap gap-2 mb-8">
+              {project.tech.map(t => (
+                <span class="px-3 py-1 text-xs font-medium rounded-full border"
+                  style={`color: ${project.color}; border-color: ${project.color}33; background: ${project.color}0d`}>
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <!-- Features grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {project.features.map(feature => (
+                <div class="p-5 bg-slate-900/80 border border-slate-800 rounded-xl hover:border-slate-700 transition-colors">
+                  <h4 class="font-semibold text-white mb-2">{feature.title}</h4>
+                  <p class="text-sm text-slate-400 leading-relaxed">{feature.detail}</p>
+                </div>
+              ))}
+            </div>
+
+            {i < projects.length - 1 && (
+              <div class="mt-20 border-t border-slate-800/50"></div>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Work -->
+  <section class="py-20 bg-slate-900/30 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm tracking-widest uppercase text-slate-500 mb-12">How I Work</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="space-y-3">
+          <div class="text-3xl font-bold text-indigo-400">01</div>
+          <h3 class="text-xl font-semibold">AI-First Development</h3>
+          <p class="text-slate-400 leading-relaxed">
+            I use Claude Code as my primary development environment. Ideas go from concept to working product in hours, not weeks.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="text-3xl font-bold text-purple-400">02</div>
+          <h3 class="text-xl font-semibold">Product Thinking</h3>
+          <p class="text-slate-400 leading-relaxed">
+            I don't just write code — I ship products. Every technical decision is driven by what users need and what the business requires.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="text-3xl font-bold text-pink-400">03</div>
+          <h3 class="text-xl font-semibold">Ship Fast, Iterate</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Built a full AI CRM platform, voice agents, and e-commerce systems — all while continuously shipping to production.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-slate-950 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's build something.</h2>
+      <p class="text-xl text-slate-400 mb-10 max-w-xl mx-auto">
+        I'm looking for a team that ships products with AI, not just talks about it.
+      </p>
+      <a href="mailto:hr@thinkprompt.com" class="inline-block px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold text-lg transition-colors">
+        hr@thinkprompt.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-800 text-center text-sm text-slate-600">
+    <div class="max-w-5xl mx-auto px-6">
+      Hanh Le &middot; 2026
+    </div>
+  </footer>
+
+</body>
+</html>
